@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission M.A.R.S.</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="/IMG/mars_why.png" />
+  </head>
+
+  <body>
+    <img
+      src="SVG/Scroll-up-btn.svg"
+      id="scroll-up-btn"
+      onclick="scrollToHome()"
+    />
+    <div class="navbar">
+      <ul class="nav-list">
+        <li><a id="home-nav" href="#tab-home">Home</a></li>
+        <li><a id="story-nav" href="#timeline">Story</a></li>
+        <li><a id="credit-nav" href="#credits">Credits</a></li>
+        <div class="toggle">
+          <svg
+            width="75"
+            height="75"
+            viewBox="0 0 75 75"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="open open-nav"
+          >
+            <rect x="13" y="22" width="49" height="4" rx="2" />
+            <rect x="13" y="48" width="49" height="4" rx="2" />
+            <rect x="13" y="35" width="49" height="4" rx="2" />
+          </svg>
+        </div>
+        <a href="https://github.com/Pxl-CodeMasters" class="github-logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="--darkreader-inline-stroke: currentColor"
+            data-darkreader-inline-stroke=""
+          >
+            <path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+            ></path>
+            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+          </svg>
+        </a>
+        <div class="toggle-theme">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="light-icon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="--darkreader-inline-stroke: currentColor"
+            data-darkreader-inline-stroke=""
+          >
+            <path d="M12 3a6.364 6.364 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="dark-icon"
+            width="43"
+            height="43"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="--darkreader-inline-stroke: currentColor"
+            data-darkreader-inline-stroke=""
+          >
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+        </div>
+      </ul>
+    </div>
+
+    <div class="navigation h-nav-resp">
+      <svg
+        viewBox="0 0 75 75"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="close-button"
+      >
+        <path
+          d="M57.5 17L18 56.5"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M18 17L37.75 36.75L57.5 56.5"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+
+      <h1>YEAR SELECTOR</h1>
+      <ul></ul>
+    </div>
+
+    <!-- Website HTML -->
+    <section id="tab-home" style="height: 150vh">
+      <img class="mars-half img" src="IMG/mars.png" />
+      <h2 id="title">Mission Mars</h2>
+      <h3 class="down-arrow">-></h3>
+    </section>
+    <section>
+      <div class="container" id="main-section">
+        <div class="top-section">
+          <h1>Timeline</h1>
+          <p>
+            The timeline of Mission M.A.R.S. Scroll down to explore! Hope you
+            enjoy the story!<span id="bold-text">
+              NOTE: This is a fictional representation, not all situations might
+              be realistic...</span
+            >
+          </p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline" id="timeline">
+          <div class="line"></div>
+
+          <!-- 2014 Section -->
+          <div class="section" id="tab-2014">
+            <div class="bead"></div>
+            <div class="content">
+              <h1>Year: 2014</h1>
+              <h2>The Beginning Of Our End</h2>
+              <p>
+                -By the year 2020, It has been evident that Earth will not be a
+                favorable long-term home. NASA predicts that by 2050 Earth will
+                be just too 'full' & there won't be any more land for growing
+                crops or doing almost anything that is possible today.... It is
+                obvious that we would some day or the other have to migrate from
+                Earth and start living life on another planet....
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+
+          <div class="section_but_where">
+            <div class="bead"></div>
+            <div class="content">
+              <h2>But Where??</h2>
+              <p>
+                But the big question is where? Where do we have enough oxygen?
+                Where do we have enough water? Which is the closest planet we
+                could colonize? The most popular answer is either Mars or our
+                satellite Moon... But which one is more preferable? The Moon has
+                some serious advantages over Mars, and Mars has some serious
+                advantages over the Moon. Obviously the Moon is much more closer
+                to the Earth and so shipping things from the Earth would be much
+                more cheaper. But Mars is much better for a 'long-term habitat'.
+                It would definitely be more expensive and slower to colonize
+                mars and lead a normal Earth-like life....
+              </p>
+            </div>
+          </div>
+
+          <!-- 2015 SECTION -->
+          <div class="section" id="tab-2015">
+            <img data-aos="zoom-in" class="mars-full" src="IMG/mars_why.png" />
+            <div class="bead"></div>
+            <div class="content">
+              <h1>Year: 2015</h1>
+              <h2>The First Steps</h2>
+              <p>
+                By now, people were fascinated by the idea of colonizing another
+                planet, especially one fine man, Elon Musk. He was absolutely
+                astonished by this idea and took his own steps into making this
+                a reality. He & his team at SpaceX started to design a rocket
+                that would take colonists & supplies to mars. He named this
+                rocket 'Starship'. This same year Russian space agency Roscosmos
+                successfully sent a probe into the orbit of Mars. Well
+                scientists discovered that Mars surface wasn't really suitable
+                for human life. Humans can't live on Mars without space
+                suits....
+              </p>
+            </div>
+          </div>
+
+          <!-- 2018 SECTION -->
+          <div class="section" id="tab-2016">
+            <img class="human-mars" src="IMG/Astronaut on mars.png" />
+            <div class="bead"></div>
+            <div class="content">
+              <h1>Year: 2018</h1>
+              <h2>The First Experiments</h2>
+              <p>
+                -To colonize Mars, we would have to know much more about it so,
+                NASA sent a robot there. The NASA InSight Lander was rover that
+                was sent to Mars in 5th May 2018. Its goal was to uncover how a
+                rocky body forms and evolves to become a planet by investigating
+                the interior structure and composition of Mars.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2019 SECTION -->
+          <div class="section" id="tab-2016">
+            <div class="bead"></div>
+            <div class="content">
+              <h1>Year: 2019</h1>
+              <h2>A Few Prototypes Here & A Few There</h2>
+              <p>
+                SpaceX has been spending years designing their Starship. Finally
+                in 2019, The Starhopper a prototype version of the Starship. The
+                aim of this prototype was to fly Starhopper to about 500 feet
+                altitude. The company built the enormous rocket to achieve its
+                goal of transporting up to 100 people in the space flights.
+                SpaceX begins to build more prototypes aiming to send the first
+                humans to Mars.
+              </p>
+
+              <p></p>
+            </div>
+          </div>
+
+          <!-- 2021 Section -->
+          <div class="section" id="tab-2021">
+            <div class="bead"></div>
+            <div class="content">
+              <h1>Year: 2021</h1>
+              <h2>Mission Concept by Space X</h2>
+              <p>
+                SpaceX has proposed the development of Mars transportation
+                infrastructure in order to facilitate the eventual colonization
+                of Mars.The mission architecture includes fully reusable launch
+                vehicles, human-rated spacecraft, on-orbit propellant tankers,
+                rapid-turnaround launch/landing mounts, and local production of
+                rocket fuel on Mars via In-Situ Resource Utilization (ISRU).
+                SpaceX's aspirational goal as of 2017 was to land their cargo
+                Starships on Mars by 2024 and the first 2 crewed starships by
+                2026.
+              </p>
+
+              <p></p>
+            </div>
+          </div>
+
+          <div class="section" id="tab-2021">
+            <div class="bead"></div>
+            <div class="content">
+              <h1>Exploring The Deep</h1>
+              <p>
+                This was a remarkable year for space exploration. NASA's
+                Perseverance Rover successfully landed on Mars. SpaceX completed
+                a high-altitude test flight & landing of their latest Starship
+                prototype. NASA picked 3 companies to build the first human
+                lunar lander model one of them being SpaceX. Later on, China
+                would land their own lander & rover on the surface of Mars....
+              </p>
+            </div>
+          </div>
+
+          <!-- 2023 SECTION -->
+          <div class="section" id="tab-2023">
+            <div class="bead"></div>
+            <div class="content">
+              <h1>Year: 2023</h1>
+              <h2>The Race Is On</h2>
+              <p>
+                By now more and more countries blast into the scene. India will
+                be launching Mangalyaan 2 to test the Martian atmosphere & the
+                surface from orbit using its 5 science instruments. While, Japan
+                will launch its MMX (Martian Moons Explorer) to get samples from
+                Mars' moon Phobos and send them back to Earth for further
+                studying. But SpaceX is much more ahead in the run, the Starship
+                prototype is now ready and operating crewed test flights. The
+                first orbital flight is a success....
+              </p>
+            </div>
+          </div>
+
+          <!-- 2026 SECTION -->
+          <div class="section" id="tab-2026">
+            <div class="bead"></div>
+            <div class="content">
+              <h1>Year: 2026</h1>
+              <h2>Lunar Missions</h2>
+              <p>
+                SpaceX is back again but this time, its a flight to the Moon.
+                The #dearmoon mission will take its crew on an orbit around the
+                Moon. At the same time, an uncrewed SpaceX ship will be set to
+                land on the lunar south pole which will be the most significant
+                landing for the company yet. But the most notable development
+                was going elsewhere. The main structure of the Lunar Gateway is
+                complete. This small space station will orbit the Moon and be
+                sort of a gas station for future space programmes....
+              </p>
+            </div>
+          </div>
+
+          <!-- 2028 SECTION -->
+          <div class="section" id="tab-2028">
+            <div class="bead"></div>
+            <div class="content">
+              <h1>Year: 2028</h1>
+              <h2>The Big Test & Another Leap For Mankind</h2>
+              <p>
+                The biggest test is now here, SpaceX has finally finished with
+                their spaceship. The ship has been tested, but this is going to
+                be its longest trip yet. Hence, they decided to make their first
+                mission to Mars, unmanned. The two cargo Starships will be
+                heading to Mars, they both are going to be loaded with a mini
+                nuclear power reactor, and a few other devices to create Oxygen
+                & Methane from the Martian atmosphere which would make life
+                possible. This is around the same time when NASA will be
+                retrieving samples from Mars & transport it back to the Earth.
+                This is apparently also the same year in which SpaceX plans to
+                send humans to the Moon to search for frozen water in its polar
+                regions....
+              </p>
+            </div>
+          </div>
+
+          <!-- 2030 SECTION -->
+          <div class="section" id="tab-2030">
+            <div class="bead"></div>
+            <div class="content">
+              <h1>Year: 2030</h1>
+              <h2>The Start Of A Civilization</h2>
+              <p>
+                Now that the Lunar Starship's test is successfull, several more
+                programmes will be coming. One of them aims to establish the
+                first human base on the moon - The Artemis Base Camp, which will
+                allow the astronauts to stick around for longer periods & do
+                research on-site. There still aren't any plans to create
+                permanent accomodation on the Moon. While all this is going on,
+                ground tests from Mars will be back which allow SpaceX to
+                finally pick the location for the Mars Base Alpha, the first
+                human outpost on Mars....
+              </p>
+            </div>
+          </div>
+
+          <!-- 2032 SECTION -->
+          <div class="section" id="tab-2032">
+            <div class="bead"></div>
+            <div class="content">
+              <h1>Year: 2032</h1>
+              <h2>The Foundation</h2>
+              <p>
+                Well Mars is about to get populated but there still many humans
+                in the newest missions. Two unmanned Starships arrive on the
+                future site of Mars Base Alpha, and toss out a fleet of rovers,
+                solar panels & mining robots that will build the foundation of
+                the base. It'll be one of the biggest construction projects in
+                the history of mankind. It would approximately take more than
+                year to complete....
+              </p>
+            </div>
+          </div>
+
+          <!-- 2034 SECTION -->
+          <div class="section" id="tab-2034">
+            <div class="bead"></div>
+            <div class="content">
+              <h1>Year: 2034</h1>
+              <h2>Civilizations On The Moon??</h2>
+              <p>
+                The robots are doing a great job, as landing fields are now
+                cleared and the base continues to be prepared. But while all
+                this 'architecture' work is going on, the Moon is about to
+                become alot more crowded. Artemis Base Camp was completed
+                recently. And after a few tests, it is ready to welcome its
+                first residents. Just like the ISS (International Space Station)
+                this base will allow its residents to conduct long term study of
+                the Moon....
+              </p>
+            </div>
+          </div>
+
+          <!-- 2036 SECTION -->
+          <div class="section" id="tab-2036">
+            <div class="bead"></div>
+            <div class="content">
+              <h1>Year: 2036</h1>
+              <h2>The Countdown Is Over.</h2>
+              <p>
+                "We've come along way, now the entire world is watching us" Elon
+                Musk said. SpaceX has recruited 24 lucky individuals to become
+                the crew members of the first manned mission to Mars. The crew
+                will be divided into groups of twelve, and sent on a pair of
+                Starships followed by cargo ships. While this is primarily a
+                SpaceX mission, they are backed up by NASA and will be watched
+                by everyone around the globe. The cargo ships are crucial for
+                this mission as they will be carrying a ISRU. This machine will
+                be used to collect, proccess, store, and use the materials found
+                on Mars to replace construction supplies and propellants that
+                would otherwise need to be taken and carried from the Earth....
+              </p>
+            </div>
+          </div>
+
+          <!-- 2036 SECTION -->
+          <div class="section">
+            <div class="bead"></div>
+            <div class="content">
+              <h2>Time For Liftoff</h2>
+              <p>
+                Solar panels are also being constructed around the planet by
+                robots, providing much of the power Mars Base Alpha will be
+                using. SpaceX also deploys its Starlink satellites around Mars,
+                guaranteeing communication and GPS abilities on this new
+                horizon. Well, certainly no one would want to get lost in the
+                new planet. 'But would it work?' that's the question everyone
+                wants to know. SpaceX estimates the trip to Mars will still take
+                a few months but it will be faster than the NASA voyages. After
+                a few years, the Starships touch down on Mars. The whole world
+                watches....
+              </p>
+            </div>
+          </div>
+
+          <!-- 2038 SECTION -->
+          <div class="section" id="tab-2038">
+            <div class="bead"></div>
+            <div class="content">
+              <h1>Year: 2038</h1>
+              <h2>Finding Life</h2>
+              <p>
+                Now the hard work begins, the 24 residents of the Mars Base
+                Alpha are living in a self-contained environment, in an
+                artificial atmosphere, and only travel outside the base for
+                research missions under controlled situations in space suits
+                that are designed to withstand the harsh conditions outside. The
+                robots have been scouting for the presence of frozen water for
+                years and once the best location has been found out, it'll be
+                mined and processed into drinkable water. The construction
+                robots are still at hard work - building more landing and launch
+                pads for future Starships....
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="credits">
+      <h1>Credits</h1>
+      <h2
+        style="
+          font-size: 20px;
+          font-weight: 400;
+          position: absolute;
+          margin-top: 70px;
+        "
+      >
+        Members
+      </h2>
+      <h4 ></span></h4>
+      <h4 style="margin-top: 20px;">ADVAITH JEETH - <span>STORY & <span style="color: #f16529;">HTML</span></span></h4>
+      <h4 style="margin-top: 40px;">Advaith Sreekumar Kaimal - <span> TIMELINE CODING(<span style="color: #33a9dc;">CSS</span> AND <span style="color: #f16529">JAVASCRIPT</span>)</span></h4>
+      <h4 style="margin-top: 60px;">Arvin Das - <span> WEBSITE DESIGNING, ICON DESIGNING AND <span style="color: #f0bf25;">JAVASCRIPT</span></span></h4>
+      <h4 style="margin-top: 80px;">MOH. REHAN KHAN - <span> FULL <span style="color: #f0bf25;">JAVASCRIPT</span> AND DESIGN</span></h4>
+    </div>
+    <script src="./scripts/timeline.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
